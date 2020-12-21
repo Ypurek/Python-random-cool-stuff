@@ -26,7 +26,12 @@ and created simple web socket server
 - free local port 4000 (set in the code)
 
 ### Description
-after start server on **ws://localhost:4000**, client can connect and send text message, which will be resent to all connected clients
+after start server on **ws://localhost:4000**, client can connect and send text message, which will be resent to all connected clients  
+also once per 10 sec server will send message to all clients  
+also server will not resend messages with **ignore** word  
+This is done to show there is no classic request/response sequence with websockets
+
+
 
 ## Launching playwright browsers concurrently
 [async_browsers_playwright.py](async_browsers_playwright.py)    
