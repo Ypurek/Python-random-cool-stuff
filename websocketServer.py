@@ -32,7 +32,11 @@ class Server:
     async def distribute(self, ws: WebSocketServerProtocol):
         async for message in ws:
             if 'ignore' in message:
-                logging.info('there is ignore word in the message')
+                logging.info('ignore response')
+            elif 'double' in message:
+                logging.info('double response')
+                await self.send_2_clients(f'{message} #1')
+                await self.send_2_clients(f'{message} #2')
             else:
                 await self.send_2_clients(message)
 
