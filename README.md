@@ -7,6 +7,10 @@ my
 | telegram channel | https://t.me/qamania              |
 | youtube channel  | https://www.youtube.com/c/QAMania |
 
+## Table of content
+- [Websocket Server](#Websocket Server)
+- [Launching playwright browsers concurrently](#Launching playwright browsers concurrently)
+
 ## Websocket Server
 [websocketServer.py](websocketServer.py)  
 Obviously, when I do testing with HTTP services, I can use Postman, SoapUI, curl or any other HTTP client. 
