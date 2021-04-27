@@ -47,3 +47,23 @@ This is done to show there is no classic request/response sequence with websocke
 
 ### Description
 The code launches 10 instances of Chromium concurrently and make them to run simple "tests" in random order. Just for fun 
+
+
+## Load testing MQTT
+[publisher.py](mqtt/publisher.py)    
+[subscriber.py](mqtt/subscriber.py)    
+
+### ref
+- [mqtt protocol](https://en.wikipedia.org/wiki/MQTT)
+- [paho mqtt](https://pypi.org/project/paho-mqtt/)
+
+### Preconditions
+- Python 3.8+
+- `pip install paho-mqtt`
+
+### Description
+Publisher script reads setting file and creates mqtt clients to publish a lot of messages to broker.  
+Expect throughput = USERS / DELAY  
+Script uses asyncio to run clients concurrent  
+
+Subscriber script designed to read all messages from defined topic to check QoS=2 messages are not lost by checking message id

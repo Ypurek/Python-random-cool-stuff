@@ -1,0 +1,10 @@
+{
+  "host": "1.1.1.1",
+  "port": 1883,
+  "login": "login",
+  "password": "password",
+  "topic": "topic/01",
+  "messagePayload": "message",
+  "messageDelay": 0.1,
+  "parallelUsers": 11
+}
